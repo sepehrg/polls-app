@@ -143,6 +143,10 @@
 
         <div style="margin-top: 25px">
           <button type="submit" class="btn">✅ Submit Vote</button>
+          <a href="{% url 'polls:results' question.id %}"
+            class="btn btn-secondary"
+            >📊 Show Results</a
+          >
           <a href="{% url 'polls:index' %}" class="btn btn-secondary"
             >🔙 Back to Polls</a
           >

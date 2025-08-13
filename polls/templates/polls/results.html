@@ -144,7 +144,6 @@
         {% endfor %}
       </div>
       {% endif %} 
-      {% with total_votes=question.choices.all|length %} 
       {% if question.choices.all %}
       <ul class="results-list">
         {% for choice in question.choices.all %}
@@ -169,7 +168,6 @@
       <div class="total-votes">
         🗳️ Total Votes Cast: {{ question.choices.all|length }}
       </div>
-      {% endwith %}
 
       <div class="navigation">
         <a href="{% url 'polls:detail' question.id %}" class="btn btn-primary"
